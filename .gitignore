@@ -1,0 +1,4 @@
+*.log
+nginx/*.log
+logstash/*.log
+syslog/*.log

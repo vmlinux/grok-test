@@ -1,0 +1,5 @@
+HOSTNAME [0-9a-zA-Z][0-9a-zA-Z-_]+
+SYSLOGNAME [a-zA-Z][0-9a-zA-Z-_]+
+SYSLOGPID \d+
+SYSLOGPROC %{SYSLOGNAME:lname}(\[%{SYSLOGPID:pid}\])?
+SYSLOGLINE %{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:loghost} %{SYSLOGPROC}: %{GREEDYDATA:message}
